@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Henna Collective — professional mehndi artists for bridal, wedding, group and event bookings across India.">
+<title>The Henna Collective | Beautiful Hands. Beautiful Beginnings.</title>
+<style>
+:root{
+  --brown:#2b160d; --brown2:#4a2717; --cream:#fbf6ee; --gold:#c99742;
+  --ink:#2d211b; --muted:#76685f; --white:#fff;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}.top{background:var(--brown);color:#fff;text-align:center;padding:8px 16px;font-size:13px}
+nav{position:sticky;top:0;z-index:10;background:rgba(251,246,238,.96);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:18px 6%;border-bottom:1px solid #eadfce}
+.brand{font-family:Georgia,serif;font-size:25px;font-weight:700;letter-spacing:.04em}.brand small{display:block;font:italic 12px Georgia;color:var(--gold);letter-spacing:.08em}
+.navlinks{display:flex;gap:24px;font-size:14px}.navlinks a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--brown);color:#fff;padding:13px 20px;border-radius:30px;font-weight:700;font-size:14px}
+.btn.gold{background:var(--gold);color:#20140d}.btn.outline{background:transparent;color:var(--brown);border:1px solid var(--brown)}
+.hero{min-height:640px;display:grid;place-items:center;text-align:center;padding:80px 7%;background:
+radial-gradient(circle at 70% 35%,rgba(201,151,66,.22),transparent 28%),
+linear-gradient(120deg,#2b160d,#4a2717 55%,#21100a);color:#fff;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"❧";position:absolute;color:rgba(201,151,66,.35);font-size:180px}
+.hero:before{left:2%;top:10%}.hero:after{right:2%;bottom:5%;transform:rotate(180deg)}
+.hero-inner{max-width:850px;position:relative;z-index:1}.eyebrow{color:#e5bd70;text-transform:uppercase;letter-spacing:.22em;font-size:13px;font-weight:700}
+h1{font:700 clamp(48px,8vw,88px)/.95 Georgia,serif;margin:18px 0}.hero p{font-size:19px;max-width:650px;margin:0 auto 30px;color:#f2e9dc}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.stats{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);max-width:1100px;margin:-40px auto 0;position:relative;border-radius:18px;box-shadow:0 18px 45px rgba(50,25,10,.12);overflow:hidden}
+.stat{padding:24px;text-align:center;border-right:1px solid #eee}.stat:last-child{border:0}.stat strong{display:block;font:700 28px Georgia;color:var(--brown)}
+section{padding:90px 7%}.section-head{text-align:center;max-width:700px;margin:0 auto 45px}.kicker{color:var(--gold);font:italic 22px Georgia}.section-head h2{font:700 42px Georgia;margin:6px 0 12px}.section-head p{color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1150px;margin:auto}
+.card{background:#fff;border:1px solid #eee1d1;border-radius:18px;padding:30px;text-align:center;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(50,25,10,.08)}
+.icon{font-size:38px}.card h3{font:700 23px Georgia;margin:12px 0 6px}.card p{color:var(--muted);font-size:14px}
+.about{background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-art{min-height:430px;border-radius:22px;background:
+radial-gradient(circle at 30% 35%,#d7b06b 0 2%,transparent 3%),
+radial-gradient(circle at 65% 55%,#8c5a31 0 2%,transparent 3%),
+linear-gradient(135deg,#3a1d10,#9b6b3e);display:grid;place-items:center;color:#fff;font:italic 50px Georgia}
+.about h2{font:700 42px Georgia;margin:5px 0 15px}.about p{color:var(--muted)}
+.checks{display:grid;gap:12px;margin:25px 0}.checks div{font-weight:700}.checks span{color:var(--gold);margin-right:8px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1150px;margin:auto}
+.photo{height:230px;border-radius:16px;background:linear-gradient(135deg,#35190e,#c49a62);display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:700;overflow:hidden;position:relative}
+.photo:nth-child(2){background:linear-gradient(135deg,#5b2b1a,#e3c79a)}
+.photo:nth-child(3){background:linear-gradient(135deg,#26130d,#8b542f)}
+.photo:nth-child(4){background:linear-gradient(135deg,#704a2a,#d9b77f)}
+.photo:nth-child(5){background:linear-gradient(135deg,#3a2014,#b97d4d)}
+.photo:nth-child(6){background:linear-gradient(135deg,#1f120c,#a8794d)}
+.cities{background:var(--brown);color:#fff}.citygrid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:950px;margin:auto}.city{border:1px solid rgba(255,255,255,.25);padding:12px 18px;border-radius:30px;color:#f2dfc0}
+.booking{background:linear-gradient(135deg,#fff,#f4e8d7)}.form{max-width:850px;margin:auto;background:#fff;padding:35px;border-radius:20px;box-shadow:0 18px 45px rgba(50,25,10,.09)}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700}.field input,.field select,.field textarea{padding:13px;border:1px solid #ddd1c2;border-radius:10px;font:inherit;background:#fff}.field textarea{min-height:110px;resize:vertical}
+footer{background:#1d100a;color:#ddd;padding:45px 7% 25px}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}.foot h3{font:700 22px Georgia;color:#fff}.foot a{display:block;color:#cdbca8;margin:8px 0;font-size:14px}.copyright{border-top:1px solid #49372c;margin-top:35px;padding-top:18px;text-align:center;color:#9d8d7e;font-size:12px}
+@media(max-width:800px){.navlinks{display:none}.stats{grid-template-columns:1fr 1fr;margin:20px 5% 0}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #eee}.services,.gallery{grid-template-columns:1fr}.about{grid-template-columns:1fr}.about-art{min-height:280px}.formgrid,.foot{grid-template-columns:1fr}.section-head h2{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="top">✦ Mehndi Artists Available Across India &nbsp; | &nbsp; ✦ Group & Wedding Bookings Open</div>
+
+<nav>
+  <a class="brand" href="#home">THE HENNA<br>COLLECTIVE<small>Beautiful Hands. Beautiful Beginnings.</small></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#cities">Cities</a><a href="#booking">Contact</a>
+  </div>
+  <a class="btn" href="#booking">BOOK NOW</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="eyebrow">Professional Mehndi Artists • All India</div>
+    <h1>The Henna Collective</h1>
+    <p>From intimate celebrations to grand weddings, we bring beautiful henna experiences to you with our skilled team of artists.</p>
+    <div class="actions"><a class="btn gold" href="#booking">Book Your Mehndi</a><a class="btn outline" style="color:#fff;border-color:#fff" href="#portfolio">View Our Work</a></div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><strong>Skilled</strong> Artists</div>
+  <div class="stat"><strong>Group</strong> Bookings</div>
+  <div class="stat"><strong>All India</strong> Service</div>
+  <div class="stat"><strong>Wedding</strong> Specialists</div>
+</div>
+
+<section id="services">
+  <div class="section-head"><div class="kicker">What we offer</div><h2>Our Services</h2><p>Beautiful mehndi for every celebration, with individual and large-group options.</p></div>
+  <div class="services">
+    <div class="card"><div class="icon">👰</div><h3>Bridal Mehndi</h3><p>Detailed bridal designs tailored to your wedding style.</p></div>
+    <div class="card"><div class="icon">💍</div><h3>Engagement Mehndi</h3><p>Elegant designs for your special day.</p></div>
+    <div class="card"><div class="icon">🌸</div><h3>Wedding & Family</h3><p>Beautiful mehndi for brides, family and guests.</p></div>
+    <div class="card"><div class="icon">✨</div><h3>Party & Festive</h3><p>Fun, trendy and quick designs for celebrations.</p></div>
+    <div class="card"><div class="icon">👥</div><h3>Group Bookings</h3><p>Multiple artists available for large gatherings.</p></div>
+    <div class="card"><div class="icon">🏢</div><h3>Events & Corporate</h3><p>Mehndi services for events, exhibitions and more.</p></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-art">Henna • Art • Tradition</div>
+  <div>
+    <div class="kicker">About us</div><h2>Passion. Tradition. Perfection.</h2>
+    <p>The Henna Collective is a team of professional mehndi artists dedicated to bringing beautiful henna experiences to celebrations across India.</p>
+    <div class="checks"><div><span>✦</span> Skilled & experienced artists</div><div><span>✦</span> Individual & group bookings</div><div><span>✦</span> Wedding & event specialists</div><div><span>✦</span> All-India availability</div></div>
+    <a class="btn" href="#booking">Enquire Now</a>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="section-head"><div class="kicker">Our work</div><h2>Portfolio</h2><p>Replace these showcase cards with your real mehndi photographs and videos.</p></div>
+  <div class="gallery">
+    <div class="photo">Arabic Designs</div><div class="photo">Bridal Details</div><div class="photo">Traditional</div>
+    <div class="photo">Feet Mehndi</div><div class="photo">Minimal</div><div class="photo">Group Bookings</div>
+  </div>
+</section>
+
+<section class="cities" id="cities">
+  <div class="section-head"><div class="kicker" style="color:#e2bd73">Where we work</div><h2 style="color:#fff">Across India</h2><p style="color:#d9c9b7">Tell us your city and event details; we’ll confirm artist availability.</p></div>
+  <div class="citygrid">
+    <div class="city">Delhi NCR</div><div class="city">Mumbai</div><div class="city">Jaipur</div><div class="city">Chandigarh</div><div class="city">Lucknow</div><div class="city">Bengaluru</div><div class="city">Hyderabad</div><div class="city">Ahmedabad</div><div class="city">Pune</div><div class="city">More Cities</div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="section-head"><div class="kicker">Let's create something beautiful</div><h2>Book Your Mehndi</h2><p>Send your event details. We’ll get back to you with availability and a quote.</p></div>
+  <form class="form" onsubmit="sendWhatsApp(event)">
+    <div class="formgrid">
+      <div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div>
+      <div class="field"><label>Phone</label><input id="phone" required placeholder="Your phone number"></div>
+      <div class="field"><label>City</label><input id="city" required placeholder="Event city"></div>
+      <div class="field"><label>Event Date</label><input id="date" type="date" required></div>
+      <div class="field"><label>Booking Type</label><select id="type"><option>Bridal Mehndi</option><option>Wedding / Family</option><option>Group Booking</option><option>Engagement</option><option>Party / Festive</option><option>Corporate / Event</option></select></div>
+      <div class="field"><label>Approx. Guests</label><input id="guests" placeholder="e.g. 50"></div>
+      <div class="field full"><label>Tell us about your event</label><textarea id="message" placeholder="Venue, preferred style, timing, or anything else..."></textarea></div>
+    </div>
+    <br><button class="btn gold" type="submit">SEND ENQUIRY ON WHATSAPP</button>
+  </form>
+</section>
+
+<footer>
+  <div class="foot">
+    <div><h3>The Henna Collective</h3><p>Beautiful Hands. Beautiful Beginnings.</p><p>Professional mehndi artists for weddings, events and celebrations across India.</p></div>
+    <div><h3>Quick Links</h3><a href="#about">About Us</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#cities">Cities</a><a href="#booking">Book Now</a></div>
+    <div><h3>Contact</h3><a href="tel:+917678189258">+91 76781 89258</a><a href="https://instagram.com/ether_ealyn" target="_blank">Instagram: @ether_ealyn</a><a href="#booking">All India Service</a></div>
+  </div>
+  <div class="copyright">© 2026 The Henna Collective. All Rights Reserved.</div>
+</footer>
+
+<script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  const msg =
+`Hello The Henna Collective!%0A%0A`+
+`Name: ${encodeURIComponent(document.getElementById('name').value)}%0A`+
+`Phone: ${encodeURIComponent(document.getElementById('phone').value)}%0A`+
+`City: ${encodeURIComponent(document.getElementById('city').value)}%0A`+
+`Event Date: ${encodeURIComponent(document.getElementById('date').value)}%0A`+
+`Booking Type: ${encodeURIComponent(document.getElementById('type').value)}%0A`+
+`Guests: ${encodeURIComponent(document.getElementById('guests').value)}%0A`+
+`Details: ${encodeURIComponent(document.getElementById('message').value)}`;
+  window.open('https://wa.me/917678189258?text='+msg,'_blank');
+}
+</script>
+</body>
+</html>
